@@ -16,7 +16,7 @@ const SidebarMenuItem = ({
     <div className="group">
       <div
         className={`group sidebar-menu-item flex items-center fill-light-gray group-hover:fill-black group-hover:text-black text-gray-light ${
-          label !== "Dashboard" ? "mt-10" : ""
+          label !== "Dashboard" ? "mt-8" : ""
         } ${className}`}
         {...props}
       >
