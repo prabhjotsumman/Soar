@@ -1,3 +1,6 @@
+import { ICONS } from "../../assets/icons/icons";
+import Icon from "../Icon/Icon";
+
 interface CardProps {
   balance: string;
   cardHolder: string;
@@ -30,7 +33,9 @@ const Card = ({
           <p>Balance</p>
           <p className="text-1xl font-sans">${balance}</p>
         </div>
-        <div className="mr-4">ICON</div>
+        <div className="mr-4">
+          <Icon icon={ICONS.CHIP_CARD} altName="card" className="" />
+        </div>
       </div>
       <div className="flex pl-6 pt-6">
         <div>
@@ -44,7 +49,10 @@ const Card = ({
       </div>
       <div className="absolute bottom-0 py-4 px-0 flex justify-between border-t border-x-stone-400 w-full ">
         <div className="text-1xl ml-6">{cardNumber}</div>
-        <div className="mr-4">OO</div>
+        <div className="mr-4 flex"> 
+          <Icon icon={ICONS.ELLIPSE} altName="card" className="" />
+          <Icon icon={ICONS.ELLIPSE} altName="card" className="-ml-8" />
+        </div>
       </div>
     </div>
   );

@@ -10,6 +10,8 @@ import loan from "./loan.svg";
 import services from "./service.svg";
 import privileges from "./econometrics.svg";
 import settings from "./settings.svg";
+import chipCard from './Chip_Card.svg'
+import Ellipse from './Ellipse.svg';
 
 export const ICONS = {
   DOLLAR: dollar,
@@ -24,4 +26,6 @@ export const ICONS = {
   SERVICES: services,
   PRIVILEGES: privileges,
   SETTINGS: settings,
+  CHIP_CARD: chipCard,
+  ELLIPSE: Ellipse
 };
