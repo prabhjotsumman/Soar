@@ -16,6 +16,7 @@ export default {
       },
       colors: {
         "roar-cream": "#f5f7fa",
+        "screen-gray": "#EDF1F7",
         "light-gray": "#B1B1B1",
         "card-gray": "#5B5A6F",
         purple: "#718EBF",
@@ -33,6 +34,7 @@ export default {
       },
       width: {
         78: "21.875rem",
+        111: '27.813rem'
       },
     },
   },
