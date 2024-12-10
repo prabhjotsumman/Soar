@@ -1,13 +1,10 @@
 import Card from "../Card/Card";
-import Heading from "../Heading/Heading";
+// import Heading from "../Heading/Heading";
 
-const MyCards = () => {
+const MyCards = ({...props}) => {
   return (
-    <div className=" bg-green-200 px-10 py-8">
-      <div className="flex justify-between">
-        <Heading name="My Cards" className="mb-5" />
-        <Heading name="See All" type="h6"/>
-      </div>
+    <div className=" bg-green-200 py-8 border-2 border-amber-700" {...props}>
+      
 
       <div className="flex justify-between">
         <Card

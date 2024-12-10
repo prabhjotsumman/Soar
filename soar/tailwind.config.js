@@ -28,13 +28,16 @@ export default {
         green: "#41D4A8",
         "green-light": '#DCFAF8',
         "green-dark": '#16DBCC',
+        "charcoal": '#232323'
       },
       height: {
         58: "14.68rem",
+        70: "17.25rem", //276px
       },
       width: {
-        78: "21.875rem",
-        111: '27.813rem'
+        82: "21.875rem",
+        111: '27.813rem',
+        160: '39.688rem'
       },
     },
   },

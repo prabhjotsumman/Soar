@@ -21,7 +21,7 @@ const TransactionCard = ({
     [ICONS.DOLLAR]: "bg-green-light",
   };
   return (
-    <div className=" flex flex-row px-4 py-2 align-middle items-center min-w-78 ">
+    <div className=" flex flex-row px-4 py-2 align-middle items-center  ">
       <div>
         <Icon icon={icon} altName="card" className={IconBg[icon]} />
       </div>

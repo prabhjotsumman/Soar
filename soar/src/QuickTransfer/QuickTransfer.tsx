@@ -9,7 +9,7 @@ import user3 from "../assets/users/user3.png";
 
 const QuickTransfer = () => {
   return (
-    <div className="my-4 w-111 p-4">
+    <div className="my-4 w-full max-w-[445px]">
       <Heading type="h1" name="Quick Transfer" />
       <div className="bg-white py-8 pl-4 rounded-3xl mt-4">
         <div className="flex flex-row justify-between">
