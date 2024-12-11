@@ -10,7 +10,7 @@ import loan from "./loan.svg";
 import services from "./service.svg";
 import privileges from "./econometrics.svg";
 import settings from "./settings.svg";
-import chipCard from "./Chip_Card.svg";
+import chipCard from "./chip_card.svg";
 import Ellipse from "./Ellipse.svg";
 import Chevron from "./Chevron.svg";
 import Vector from "./vector.svg";
