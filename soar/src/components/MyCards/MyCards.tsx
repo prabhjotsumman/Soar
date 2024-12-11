@@ -3,8 +3,8 @@ import Card from "../Card/Card";
 
 const MyCards = ({ ...props }) => {
   return (
-    <div className=" bg-green-200 py-8 border-2 border-amber-700" {...props}>
-      <div className="border-2 border-red-600 flex overflow-scroll xs:flex sm:flex md:flex xl:flex">
+    <div {...props}>
+      <div className="flex overflow-scroll xs:overflow-auto sm:overflow-auto md:overflow-auto xs:flex sm:flex md:flex xl:flex">
         <Card
           balance={"5,756"}
           cardHolder="Eddy Cusuma"

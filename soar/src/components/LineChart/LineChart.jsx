@@ -25,7 +25,7 @@ function LineChart({ className, ...props }) {
   };
 
   return (
-    <div className="border-2 border-black bg-white rounded-3xl w-full  xs:w-160 sm:w-160 md:w-160 xl:w-160 xs:h-70">
+    <div className=" bg-white rounded-3xl w-full sm:h-70 md:h-70 xs:w-160 sm:w-160 md:w-160 xl:w-160 xs:h-70 p-4">
       <Line
         data={DATA}
         options={{

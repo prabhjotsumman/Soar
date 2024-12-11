@@ -4,12 +4,14 @@ interface SidebarMenuItemProps {
   menuIcon: string;
   label: string;
   className?: string;
+  selected?: boolean;
 }
 
 const SidebarMenuItem = ({
   menuIcon,
   label,
   className,
+  selected,
   ...props
 }: SidebarMenuItemProps) => {
   return (
@@ -22,7 +24,7 @@ const SidebarMenuItem = ({
       >
         <Icon icon={menuIcon} altName="card" className=" fill-green" />
 
-        <p className=" pl-6 font-sans font-medium text-lg leading-5">{label}</p>
+        <p className={`pl-6 font-sans font-medium text-lg leading-5 ${selected ? 'text-black' : ''}`}>{label}</p>
       </div>
     </div>
   );

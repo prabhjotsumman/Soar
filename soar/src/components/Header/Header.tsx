@@ -7,7 +7,7 @@ import user6 from "../../assets/users/user6.png";
 const Header = () => {
   return (
     <div>
-      <div className=" flex w-full bg-white border-black border-4 my-4 align-middle items-center">
+      <div className=" flex w-full bg-white py-4 align-middle items-center">
         {/* LOGO */}
         <img
           src={Logo}
@@ -15,19 +15,19 @@ const Header = () => {
           className="hidden xs:block sm:block md:block xl:block pl-11 logo-bg pr-10"
         />
 
-        <div className="border-2 border-red-600 flex justify-between w-full items-center">
+        <div className="flex justify-between w-full items-center">
           {/* Hamburger */}
           <div className="block sm:hidden md:hidden xs:hidden">
             <Icon icon={ICONS.HAM_BURGER} altName="hamburger" />
           </div>
 
           {/* Item Title */}
-          <div className="pl-10 font-semibold text-xxl align-middle leading-8x ">
+          <div className="pl-10 font-semibold text-xxl align-middle leading-8x">
             Overview
           </div>
 
           {/* Header Bar */}
-          <div className="flex justify-between border-2 border-violet-600 items-center w-1/2">
+          <div className="flex justify-between items-center xs:w-1/2 sm:w-1/2 md:w-1/2">
             <div className="flex justify-evenly items-center w-full">
               <div className="hidden xs:block sm:block md:block">
                 <SearchBar />

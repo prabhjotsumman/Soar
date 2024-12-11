@@ -47,7 +47,7 @@ const Card = ({
           <p>{validThru}</p>
         </div>
       </div>
-      <div className="absolute bottom-0 py-4 px-0 flex justify-between border-t border-x-stone-400 w-full ">
+      <div className="absolute bottom-0 py-4 px-0 flex justify-between border-t border-t-stone-900 w-full ">
         <div className="text-1xl ml-6">{cardNumber}</div>
         <div className="mr-4 flex"> 
           <Icon icon={ICONS.ELLIPSE} altName="card" className="" />

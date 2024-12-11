@@ -7,7 +7,7 @@ interface AvatarProps {
 
 const AvatarCard = ({ name, designation, picture, selected }: AvatarProps) => {
   return (
-    <div className="justify-between text-center min-w-24 border-2 border-red-500 h-full">
+    <div className="justify-between text-center min-w-24 h-full">
       <div className="flex justify-evenly">
         <img src={picture} alt="user" className="rounded-full" />
       </div>

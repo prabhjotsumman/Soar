@@ -4,10 +4,10 @@ import { ICONS } from "../../assets/icons/icons";
 
 const RecentTransactions = () => {
   return (
-    <div className=" py-8 border-2 border-fuchsia-700">
+    <div className="">
       {/* <Heading name="Recent Transaction" /> */}
 
-      <div className="mt-5 bg-white rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-3xl py-6">
+      <div className="bg-white rounded-tl-3xl rounded-tr-3xl rounded-bl-3xl rounded-br-3xl py-5">
         <TransactionCard
           name="Deposit from my Card"
           icon={ICONS.CARD}

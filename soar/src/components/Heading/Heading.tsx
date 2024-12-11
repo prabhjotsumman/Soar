@@ -6,7 +6,7 @@ interface HeadingProps {
 
 const Heading = ({ name, className, type = "h1", ...props }: HeadingProps) => {
   const fontSize = {
-    h1: "text-xl",
+    h1: "text-1xl",
     h2: "text-xl",
     h3: "text-xl",
     h4: "text-xl",
