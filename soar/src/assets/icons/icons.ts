@@ -15,6 +15,7 @@ import Ellipse from "./Ellipse.svg";
 import Chevron from "./Chevron.svg";
 import Vector from "./vector.svg";
 import Notification from "./notification.svg";
+import Hamburger from './handburger.svg';
 
 export const ICONS = {
   DOLLAR: dollar,
@@ -34,4 +35,5 @@ export const ICONS = {
   CHEVRON: Chevron,
   VECTOR: Vector,
   NOTIFICATION: Notification,
+  HAM_BURGER: Hamburger
 };

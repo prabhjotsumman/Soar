@@ -3,8 +3,8 @@ import "./SearchBar.css";
 const SearchBar = () => {
   return (
     <div>
-      <div className="relative">
-        <div className="absolute inset-y-0 start-8 flex items-center ps-3 pointer-events-none">
+      <div className="relative ">
+        <div className="absolute inset-y-0 start-16 xs:start-8 sm:start-8 md:start-8 lg:start-8 flex items-center ps-3 pointer-events-none">
           <svg
             className="w-4 h-4 text-gray-500 dark:text-gray-400"
             aria-hidden="true"

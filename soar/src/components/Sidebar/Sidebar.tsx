@@ -3,9 +3,9 @@ import SidebarMenuItem from "./SidebarMenuItem/SidebarMenuItem";
 import { ICONS } from "../../assets/icons/icons";
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({...props}) => {
   return (
-    <div className="sidebar w-[15.62rem] h-screen border-2 border-red-700">
+    <div className="hidden xs:block sm:block md:block sidebar w-[15.62rem] h-screen border-2 border-red-700" {...props}>
       <div className="pl-11">
         <SidebarMenuItem menuIcon={ICONS.HOME} label="Dashboard" />
         <SidebarMenuItem menuIcon={ICONS.TRANSFER} label="Transactions" />

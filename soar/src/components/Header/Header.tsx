@@ -6,19 +6,47 @@ import user6 from "../../assets/users/user6.png";
 
 const Header = () => {
   return (
-    <div className=" flex w-full bg-white border-black border-4 my-4 align-middle items-center">
-      <img src={Logo} alt="logo" className=" pl-11 logo-bg pr-10" />
+    <div>
+      <div className=" flex w-full bg-white border-black border-4 my-4 align-middle items-center">
+        {/* LOGO */}
+        <img
+          src={Logo}
+          alt="logo"
+          className="hidden xs:block sm:block md:block xl:block pl-11 logo-bg pr-10"
+        />
 
-      <div className="border-2 border-red-600 flex justify-between w-full">
-        <div className="pl-10 font-semibold text-xxl align-middle leading-8x ">
-          Overview
+        <div className="border-2 border-red-600 flex justify-between w-full items-center">
+          {/* Hamburger */}
+          <div className="block sm:hidden md:hidden xs:hidden">
+            <Icon icon={ICONS.HAM_BURGER} altName="hamburger" />
+          </div>
+
+          {/* Item Title */}
+          <div className="pl-10 font-semibold text-xxl align-middle leading-8x ">
+            Overview
+          </div>
+
+          {/* Header Bar */}
+          <div className="flex justify-between border-2 border-violet-600 items-center w-1/2">
+            <div className="flex justify-evenly items-center w-full">
+              <div className="hidden xs:block sm:block md:block">
+                <SearchBar />
+              </div>
+              <div className="hidden xs:block sm:block md:block">
+                <Icon icon={ICONS.SETTINGS} altName="Settings" />
+              </div>
+              <div className="hidden xs:block sm:block md:block">
+                <Icon icon={ICONS.NOTIFICATION} altName="Notification" />
+              </div>
+            </div>
+            <div className="mr-4 p-1">
+              <img src={user6} alt="user" className="rounded-full" />
+            </div>
+          </div>
         </div>
-        <div className="flex justify-evenly border-2 border-violet-600 items-center w-1/2">
-          <SearchBar />
-          <Icon icon={ICONS.SETTINGS} altName="Settings" />
-          <Icon icon={ICONS.NOTIFICATION} altName="Notification" />
-          <img src={user6} alt="user" className="rounded-full" />
-        </div>
+      </div>
+      <div className="xs:hidden sm:hidden md:hidden lg:hidden text-center ">
+        <SearchBar />
       </div>
     </div>
   );

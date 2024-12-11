@@ -25,7 +25,7 @@ const Card = ({
 
   return (
     <div
-      className={`h-58 w-full min-w-82 rounded-3xl border ${selectedBg} relative ${className}`}
+      className={`h-58 w-64 xs:w-82 sm:w-82 md:w-82 xl:w-82 min-w-80 rounded-3xl border ${selectedBg} relative ${className}`}
       {...props}
     >
       <div className="flex justify-between pl-6 pt-6">

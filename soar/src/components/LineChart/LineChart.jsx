@@ -13,19 +13,19 @@ function LineChart({ className, ...props }) {
         borderColor: "#1814F3",
         fill: true,
         backgroundColor: (context) => {
-            const ctx = context.chart.ctx;
-            const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-            gradient.addColorStop(0, "rgba(45, 96, 255, 0.25)");
-            gradient.addColorStop(1, "rgba(45, 96, 255, 0)");
-            return gradient;
-          },
-        lineTension: 0.44
+          const ctx = context.chart.ctx;
+          const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+          gradient.addColorStop(0, "rgba(45, 96, 255, 0.25)");
+          gradient.addColorStop(1, "rgba(45, 96, 255, 0)");
+          return gradient;
+        },
+        lineTension: 0.44,
       },
     ],
   };
 
   return (
-    <div className="border-2 border-black bg-white rounded-3xl  w-160 h-70">
+    <div className="border-2 border-black bg-white rounded-3xl w-full  xs:w-160 sm:w-160 md:w-160 xl:w-160 xs:h-70">
       <Line
         data={DATA}
         options={{
