@@ -1,13 +1,20 @@
+import { Link } from "react-router";
+
 import SidebarMenuItem from "./SidebarMenuItem/SidebarMenuItem";
 
 import { ICONS } from "../../assets/icons/icons";
 import "./Sidebar.css";
 
-const Sidebar = ({...props}) => {
+const Sidebar = ({ ...props }) => {
   return (
-    <div className="hidden xs:hidden sm:hidden md:block sidebar w-[15.62rem] h-screen" {...props}>
+    <div
+      className="hidden xs:hidden sm:hidden md:block sidebar w-[15.62rem] h-screen"
+      {...props}
+    >
       <div className="pl-11">
-        <SidebarMenuItem menuIcon={ICONS.HOME} label="Dashboard" selected/>
+        <Link to="/dashboard/overview">
+          <SidebarMenuItem menuIcon={ICONS.HOME} label="Dashboard" selected />
+        </Link>
         <SidebarMenuItem menuIcon={ICONS.TRANSFER} label="Transactions" />
         <SidebarMenuItem menuIcon={ICONS.ACCOUNTS} label="Accounts" />
         <SidebarMenuItem menuIcon={ICONS.INVESTMENT} label="Investments" />
@@ -15,7 +22,9 @@ const Sidebar = ({...props}) => {
         <SidebarMenuItem menuIcon={ICONS.LOAN} label="Loans" />
         <SidebarMenuItem menuIcon={ICONS.SERVICES} label="Services" />
         <SidebarMenuItem menuIcon={ICONS.PRIVILEGES} label="My Privileges" />
-        <SidebarMenuItem menuIcon={ICONS.SETTINGS} label="Setting" />
+        <Link to="/dashboard/settings">
+          <SidebarMenuItem menuIcon={ICONS.SETTINGS} label="Setting" />
+        </Link>
       </div>
     </div>
   );
