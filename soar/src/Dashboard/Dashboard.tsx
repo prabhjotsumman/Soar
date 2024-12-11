@@ -6,9 +6,6 @@ import Overview from "./Overview";
 import Settings from "./Settings";
 
 function Dashboard() {
-//   const location = useLocation();
-//   const pathname = location?.pathname;
-
   return (
     <>
       <div className="w-screen bg-white xs:bg-roar-cream sm:bg-roar-cream">

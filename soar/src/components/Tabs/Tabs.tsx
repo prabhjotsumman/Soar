@@ -10,7 +10,7 @@ const Tabs = ({ tabs, content }: TabsProps) => {
   return (
     <div className="w-full">
       {/* Tab headers */}
-      <div className="space-x-10">
+      <div className="space-x-0 md:space-x-10 lg:space-x-14">
         {tabs.map((tab, index) => (
           <button
             key={index}
