@@ -9,6 +9,7 @@ const Header = () => {
   const [profilePic, setProfilePic] = useState(user6);
   const [storedData] = useState(localStorage.getItem("profileData"));
 
+  // use the image from the localstorage
   useEffect(() => {
     if (storedData) {
       const parsedData = JSON.parse(storedData);
@@ -19,6 +20,24 @@ const Header = () => {
       });
     }
   }, [storedData]);
+
+  // Update when new profile picture is updated
+  useEffect(() => {
+    const handleStorage = () => {
+      const storedData = localStorage.getItem("profileData");
+      if (storedData) {
+        const parsedData = JSON.parse(storedData);
+        Object.keys(parsedData).forEach((key) => {
+          if (key === "profilePic") {
+            setProfilePic(parsedData[key]);
+          }
+        });
+      }
+    };
+
+    window.addEventListener("storage", () => handleStorage());
+    return () => window.removeEventListener("storage", () => handleStorage());
+  }, []);
 
   return (
     <div>

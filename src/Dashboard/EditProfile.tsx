@@ -45,6 +45,7 @@ const EditProfile = () => {
     const profileData = { ...data, profilePic };
     localStorage.setItem("profileData", JSON.stringify(profileData));
     alert("Your data has been saved.");
+    window.dispatchEvent(new Event("storage"));
   };
 
   const handleProfilePicChange = (e: React.ChangeEvent<HTMLInputElement>) => {
