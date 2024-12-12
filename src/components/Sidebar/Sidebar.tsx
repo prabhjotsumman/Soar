@@ -8,7 +8,7 @@ import "./Sidebar.css";
 const Sidebar = ({ ...props }) => {
   return (
     <div
-      className="hidden xs:hidden sm:hidden md:block sidebar w-[15.62rem] h-screen"
+      className="bg-white  z-10 hidden xs:hidden sm:hidden md:hidden lg:block min-w-[15.62rem] h-auto"
       {...props}
     >
       <div className="pl-11">

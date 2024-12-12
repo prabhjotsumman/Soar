@@ -1,25 +1,26 @@
+import useStore from "../../hooks/useStore";
 import Card from "../Card/Card";
-// import Heading from "../Heading/Heading";
 
 const MyCards = ({ ...props }) => {
+  const store = useStore();
+  const allCardsData = store?.allCards || [];
   return (
     <div {...props}>
-      <div className="flex overflow-scroll xs:overflow-auto sm:overflow-auto md:overflow-auto xs:flex sm:flex md:flex xl:flex">
-        <Card
-          balance={"5,756"}
-          cardHolder="Eddy Cusuma"
-          validThru="12/22"
-          cardNumber={"3778 **** **** 1234"}
-          selected
-        />
-        <Card
-          balance={"5,756"}
-          cardHolder="Eddy Cusuma"
-          validThru="12/22"
-          cardNumber={"3778 **** **** 1234"}
-          selected={false}
-          className="ml-8"
-        />
+      <div className="flex w-full overflow-scroll xs:overflow-auto sm:overflow-auto md:overflow-auto pb-4">
+        {allCardsData &&
+          allCardsData?.map((card, index) => {
+            return (
+              <Card
+                key={card.maskedCardNumber}
+                balance={`${card.balance}`}
+                cardHolder={card.cardHolderName}
+                validThru={card.validThru}
+                cardNumber={card.maskedCardNumber}
+                selected={index === 0}
+                className={index !== 0 ? "ml-8" : ""}
+              />
+            );
+          })}
       </div>
     </div>
   );

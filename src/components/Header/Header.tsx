@@ -3,11 +3,26 @@ import { ICONS } from "../../assets/icons/icons";
 import Icon from "../Icon/Icon";
 import SearchBar from "../SearchBar/SearchBar";
 import user6 from "../../assets/users/user6.png";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [profilePic, setProfilePic] = useState(user6);
+  const [storedData] = useState(localStorage.getItem("profileData"));
+
+  useEffect(() => {
+    if (storedData) {
+      const parsedData = JSON.parse(storedData);
+      Object.keys(parsedData).forEach((key) => {
+        if (key === "profilePic") {
+          setProfilePic(parsedData[key]);
+        }
+      });
+    }
+  }, [storedData]);
+
   return (
     <div>
-      <div className=" flex w-full bg-white py-4 align-middle items-center">
+      <div className="flex w-full bg-white py-4 align-middle items-center">
         {/* LOGO */}
         <img
           src={Logo}
@@ -27,9 +42,9 @@ const Header = () => {
           </div>
 
           {/* Header Bar */}
-          <div className="flex justify-between items-center xs:w-1/2 sm:w-1/2 md:w-1/2">
+          <div className="flex justify-between items-center ">
             <div className="flex justify-evenly items-center w-full">
-              <div className="hidden xs:block sm:block md:block">
+              <div className="hidden xs:hidden sm:hidden md:block">
                 <SearchBar />
               </div>
               <div className="hidden xs:block sm:block md:block">
@@ -39,13 +54,18 @@ const Header = () => {
                 <Icon icon={ICONS.NOTIFICATION} altName="Notification" />
               </div>
             </div>
-            <div className="mr-4 p-1">
-              <img src={user6} alt="user" className="rounded-full" />
+            {/* Profile Picture */}
+            <div className="mr-4 p-1 items-center">
+              <img
+                src={profilePic}
+                alt="user"
+                className="rounded-full w-14 h-12 object-cover "
+              />
             </div>
           </div>
         </div>
       </div>
-      <div className="xs:hidden sm:hidden md:hidden lg:hidden text-center ">
+      <div className="xs:hidden sm:block md:hidden lg:hidden text-center ">
         <SearchBar />
       </div>
     </div>

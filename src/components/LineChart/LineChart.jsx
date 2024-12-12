@@ -1,15 +1,21 @@
 // components/LineChart.js
 import React from "react";
 import { Line } from "react-chartjs-2";
+import useStore from "../../hooks/useStore";
 
 function LineChart({ className, ...props }) {
+  const store = useStore();
+  const balanceHistoryData = store?.balanceHistory || [
+    120, 350, 210, 450, 800, 233, 600, 210, 610,
+  ];
+
   const labels = ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan"];
 
   const DATA = {
     labels: labels,
     datasets: [
       {
-        data: [120, 350, 210, 450, 800, 233, 600, 210, 610],
+        data: balanceHistoryData,
         borderColor: "#1814F3",
         fill: true,
         backgroundColor: (context) => {
@@ -25,7 +31,10 @@ function LineChart({ className, ...props }) {
   };
 
   return (
-    <div className=" bg-white rounded-3xl w-full sm:h-70 md:h-70 xs:w-160 sm:w-160 md:w-160 xl:w-160 xs:h-70 p-4">
+    <div
+      className=" bg-white rounded-3xl w-full sm:h-70 md:h-70 xs:w-160 sm:w-160 md:w-160 xl:w-160 xs:h-70 p-4"
+      {...props}
+    >
       <Line
         data={DATA}
         options={{
