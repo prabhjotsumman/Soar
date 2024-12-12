@@ -25,6 +25,7 @@ const SearchBar = () => {
           className="search-bar h-12 pl-16 ml-4 px-10 rounded-3xl bg-screen-gray"
           placeholder="Search for something"
           prefix="$"
+          aria-label="Search bar"
         />
       </div>
     </div>

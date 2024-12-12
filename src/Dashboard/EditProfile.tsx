@@ -74,7 +74,7 @@ const EditProfile = () => {
               className="absolute inset-0 opacity-0 cursor-pointer"
               onChange={handleProfilePicChange}
             />
-            <button type="button" className="absolute bottom-0 -right-2">
+            <button type="button" aria-label="Edit profile picture" className="absolute bottom-0 -right-2">
               <Icon icon={ICONS.PENCIL} altName="Edit profile pic" />
             </button>
           </div>
@@ -90,6 +90,7 @@ const EditProfile = () => {
               <label className="block text-gray-600 mb-2">Your Name</label>
               <input
                 type="text"
+                aria-label="Enter Name"
                 {...register("name", { required: "Name is required" })}
                 className={`w-full p-2 border rounded-xl text-gray-600 ${
                   errors.name ? "border-red-500" : "border-gray-300"
@@ -107,6 +108,7 @@ const EditProfile = () => {
               <label className="block text-gray-600 mb-2">User Name</label>
               <input
                 type="text"
+                aria-label="Enter UserName"
                 {...register("username", { required: "Username is required" })}
                 className={`w-full p-2 border rounded-xl text-gray-600 ${
                   errors.username ? "border-red-500" : "border-gray-300"
@@ -124,6 +126,7 @@ const EditProfile = () => {
               <label className="block text-gray-600 mb-2">Email</label>
               <input
                 type="email"
+                aria-label="Enter Email"
                 {...register("email", {
                   required: "Email is required",
                   pattern: {
@@ -147,6 +150,7 @@ const EditProfile = () => {
               <label className="block text-gray-600 mb-2">Password</label>
               <input
                 type="password"
+                aria-label="Enter Password"
                 {...register("password", {
                   required: "Password is required",
                   minLength: {
@@ -170,6 +174,7 @@ const EditProfile = () => {
               <label className="block text-gray-600 mb-2">Date of Birth</label>
               <input
                 type="date"
+                aria-label="Enter Date of Birth"
                 {...register("dob", { required: "Date of Birth is required" })}
                 className={`w-full p-2 border rounded-xl text-gray-600 ${
                   errors.dob ? "border-red-500" : "border-gray-300"
@@ -189,6 +194,7 @@ const EditProfile = () => {
               </label>
               <input
                 type="text"
+                aria-label="Enter present address"
                 {...register("presentAddress")}
                 className="w-full p-2 border rounded-xl text-gray-600 border-gray-300"
               />
@@ -201,6 +207,7 @@ const EditProfile = () => {
               </label>
               <input
                 type="text"
+                aria-label="Enter permanent address"
                 {...register("permanentAddress")}
                 className="w-full p-2 border rounded-xl text-gray-600 border-gray-300"
               />
@@ -211,6 +218,7 @@ const EditProfile = () => {
               <label className="block text-gray-600 mb-2">City</label>
               <input
                 type="text"
+                aria-label="Enter city"
                 {...register("city")}
                 className="w-full p-2 border rounded-xl text-gray-600 border-gray-300"
               />
@@ -221,6 +229,7 @@ const EditProfile = () => {
               <label className="block text-gray-600 mb-2">Postal Code</label>
               <input
                 type="text"
+                aria-label="Enter postal code"
                 {...register("postalCode")}
                 className="w-full p-2 border rounded-xl text-gray-600 border-gray-300"
               />
@@ -231,6 +240,7 @@ const EditProfile = () => {
               <label className="block text-gray-600 mb-2">Country</label>
               <input
                 type="text"
+                aria-label="Enter country"
                 {...register("country")}
                 className="w-full p-2 border rounded-xl text-gray-600 border-gray-300"
               />
@@ -240,6 +250,7 @@ const EditProfile = () => {
             <div className="col-span-full flex justify-center md:justify-end lg:justify-end xl:justify-end">
               <button
                 type="submit"
+                aria-label="Save profile information"
                 className="bg-black text-white px-16 py-4 rounded-xl  hover:bg-slate-800 w-full md:w-fit lg:w-fit xl:w-fit"
               >
                 Save

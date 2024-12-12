@@ -29,20 +29,20 @@ const QuickTransfer = () => {
           <div className="relative ml-3 xs:ml-8 s:ml-8 md:ml-8 xl:ml-8">
             <input
               className="h-12 text-purple bg-screen-gray pl-5 xs:px-8 sm:px-8 md:px-8 xl:px-8 rounded-3xl"
-              // value="525.50"
-              // prefix="$"
+              aria-label="enter amount to send"
             />
             <button
+              aria-label="Send money"
               className={`bg-black text-white rounded-full pl-5 pr-4 py-1 absolute right-0 h-full hover:bg-slate-800 ${
                 effect ? "animate-bounce" : " "
               }`}
               onClick={() => {
                 setEffect(true);
-                setTimeout(()=> setEffect(false), 600)
+                setTimeout(() => setEffect(false), 600);
               }}
               onAnimationEnd={() => setEffect(false)}
             >
-              <div className="flex items-center">
+              <div className="flex items-center" aria-label="Send button">
                 Send
                 <Icon icon={ICONS.VECTOR} altName="vector" />
               </div>
