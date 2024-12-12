@@ -83,11 +83,11 @@ const Header = () => {
               </div>
             </div>
             {/* Profile Picture */}
-            <div className=" p-1 items-center w-28">
+            <div className="flex-shrink-0 p-1 mr-3 items-center ">
               <img
                 src={profilePic}
                 alt="user"
-                className="rounded-full w-14 h-12 object-cover "
+                className="rounded-full w-12 h-12 object-cover "
               />
             </div>
           </div>

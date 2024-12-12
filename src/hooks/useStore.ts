@@ -51,7 +51,6 @@ const useStore = () => {
         console.error("Error fetching data:", error);
       } finally {
         setLoading(false);
-        //  USE DATA FROM HERE
       }
     };
 
