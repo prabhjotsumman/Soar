@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [profilePic, setProfilePic] = useState(user6);
+  const [rotate, setRotate] = useState(false);
   const [storedData] = useState(localStorage.getItem("profileData"));
 
   // use the image from the localstorage
@@ -39,21 +40,29 @@ const Header = () => {
     return () => window.removeEventListener("storage", () => handleStorage());
   }, []);
 
+  const handleHamburgerMenu = () => {
+    window.dispatchEvent(new Event("HamburgerMenuClicked"));
+    setRotate(!rotate);
+  };
+
   return (
     <div>
       <div className="flex w-full bg-white py-4 align-middle items-center">
-        {/* LOGO */}
-        <img
-          src={Logo}
-          alt="logo"
-          className="hidden xs:block sm:block md:block xl:block pl-11 logo-bg pr-10"
-        />
-
         <div className="flex justify-between w-full items-center">
           {/* Hamburger */}
-          <div className="block sm:hidden md:hidden xs:hidden">
+          <div
+            className={`block lg:hidden xl:hidden ml-2 ${rotate ? "rotate-90" : ""}`}
+            onClick={handleHamburgerMenu}
+          >
             <Icon icon={ICONS.HAM_BURGER} altName="hamburger" />
           </div>
+
+          {/* LOGO */}
+          <img
+            src={Logo}
+            alt="logo"
+            className="hidden xs:hidden sm:hidden md:hidden xl:block pl-11 logo-bg pr-10"
+          />
 
           {/* Item Title */}
           <div className="pl-10 font-semibold text-xxl align-middle leading-8x">
@@ -61,7 +70,7 @@ const Header = () => {
           </div>
 
           {/* Header Bar */}
-          <div className="flex justify-between items-center ">
+          <div className="flex justify-between items-center">
             <div className="flex justify-evenly items-center w-full">
               <div className="hidden xs:hidden sm:hidden md:block">
                 <SearchBar />
@@ -74,7 +83,7 @@ const Header = () => {
               </div>
             </div>
             {/* Profile Picture */}
-            <div className="mr-4 p-1 items-center">
+            <div className=" p-1 items-center w-28">
               <img
                 src={profilePic}
                 alt="user"
