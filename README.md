@@ -8,3 +8,6 @@ Roar.inc - Front-End Developer Assessment Task
 
 ## Project is deployed on Vercel 
 Link: [Soar.Inc](https://soar-ui.vercel.app/)
+
+## Developer
+Linkedin: [Prabhjot Summan](https://linkedin.com/in/prabhjotsumman/)
